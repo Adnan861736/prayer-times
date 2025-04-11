@@ -1,2 +1,2 @@
 # prayer-times
-A web app to display daily prayer times with a clean UI and local time support.
+A web app that displays  prayer times with a beautiful and user-friendly UI.
