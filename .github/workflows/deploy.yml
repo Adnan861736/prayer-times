@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # أو main، حسب الفرع الذي تستخدمه
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # يقوم بجلب الكود الخاص بك من المستودع
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # تحديد إصدار Node.js (يمكنك تغييره حسب الحاجة)
+
+    - name: Install dependencies
+      run: npm install  # تثبيت الحزم التي يحتاجها المشروع
+
+    - name: Build the project
+      run: npm run build  # بناء المشروع (تأكد أن الأمر يتطابق مع ما تستخدمه للبناء)
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.0  # نشر المشروع باستخدام GitHub Pages
+      with:
+        branch: gh-pages  # الفرع الذي سيتم نشر الموقع فيه (تأكد من أن هذا هو الفرع الصحيح الذي تريد نشره فيه)
+        folder: dist  # المجلد الذي يحتوي على الملفات الجاهزة للنشر (عادةً ما يكون `dist` أو `build` حسب الإعدادات)
