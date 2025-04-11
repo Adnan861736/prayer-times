@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+*{padding: 0px;
+margin: 0px;
+box-shadow: 20px;
+font-family: 'Cairo', sans-serif;
+}
+
+html{
+  direction: rtl;
+}
+section{background: url("./assets/images.jpeg");
+background-size: cover;
+background-position: center;
+min-height: 100vh;
+display: flex;
+align-items: center;
+
+}
+.container{
+width: 650px;
+background-color: #322a224e;
+padding: 25px;
+backdrop-filter: blur(10px);
+border-radius: 10px;
+border: 1px solid #d7d7d74e;
+margin-right:26.5%;
+
+
+}
+.top-sec{
+display: flex;
+justify-content: space-between;
+padding-bottom: 40px;
+margin-bottom: 40px;
+border-bottom: 1px solid #d7d7d74e;
+}
+.select{
+width: 250px;
+border-radius: 5px;
+outline: none;
+background: #a54f3a;
+padding: 2px 10px;
+color: #fff;
+font-size: 22px;
+margin-top: 10px;
+margin-left: 25px;
+
+}
+.h3{
+font-size: 26px;
+color: #fff;
+margin-left: 25px;
+
+}
+.date{
+  width: 25 px;
+
+}
+.h4{
+  font-size: 26px;
+color: #fff;
+margin-top: 10px;
+margin-left: 25px;
+
+}
+.prayer{
+
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+padding-left: 5px 25px;
+background: #c0583e75;
+margin-bottom: 25px;
+color: #fff;
+border-radius: 5px;
+border-bottom: 1px solid #d7d7d74e;
+font-size: 24px;
+}
